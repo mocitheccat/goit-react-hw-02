@@ -1,0 +1,7 @@
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}

@@ -1,0 +1,26 @@
+.button {
+    background-color: #543310;
+    color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    padding: 1em 2em 1em 2em;
+    cursor: pointer;
+    text-align: center;
+    /*margin: 10px;*/
+}
+.good {
+    background-color: forestgreen;
+}
+.neutral {
+    background-color: #C3B600E4;
+}
+
+.bad {
+    background-color: darkred;
+}
+
+.hidden {
+    display: none;
+}
+
