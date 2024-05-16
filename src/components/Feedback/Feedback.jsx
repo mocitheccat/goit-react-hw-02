@@ -1,4 +1,7 @@
-const Feedback = ({ stats: { good, neutral, bad } }) => {
+const Feedback = ({
+  stats: { good, neutral, bad },
+  feedbacks: { positiveFeedback, totalFeedback },
+}) => {
   if (!totalFeedback) {
     return <p>No feedback given</p>;
   }

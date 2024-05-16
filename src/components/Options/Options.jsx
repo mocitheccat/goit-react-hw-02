@@ -1,7 +1,7 @@
 import { Button } from "../index.js";
 import css from "./Options.module.css";
 
-const Options = ({ stats, updateFeedback }) => {
+const Options = ({ updateFeedback, totalFeedback }) => {
   const options = ["good", "neutral", "bad", "reset"];
 
   return (
@@ -12,6 +12,7 @@ const Options = ({ stats, updateFeedback }) => {
             key={index}
             variant={option}
             btnText={option.toUpperCase()}
+            totalFeedback={totalFeedback}
             onClick={() => updateFeedback(option)}
           />
         );
