@@ -1,5 +1,5 @@
 import { Description, Options, Feedback } from "./components/index.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const initialStats = {
@@ -7,7 +7,14 @@ function App() {
     neutral: 0,
     bad: 0,
   };
-  const [stats, setStats] = useState(initialStats);
+
+  const [stats, setStats] = useState(() => {
+    return JSON.parse(localStorage.getItem("stats")) || initialStats;
+  });
+  useEffect(() => {
+    localStorage.setItem("stats", JSON.stringify(stats));
+  }, [stats]);
+
   const totalFeedback = stats.good + stats.neutral + stats.bad;
   const positiveFeedback = Math.round((stats.good / totalFeedback) * 100);
   const feedbacks = {

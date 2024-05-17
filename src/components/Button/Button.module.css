@@ -7,7 +7,7 @@
     padding: 1em 2em 1em 2em;
     cursor: pointer;
     text-align: center;
-    /*margin: 10px;*/
+    margin-bottom: 10px;
 }
 .good {
     background-color: forestgreen;
