@@ -5,7 +5,7 @@ const Feedback = ({
   feedbacks: { positiveFeedback, totalFeedback },
 }) => {
   if (!totalFeedback) {
-    return <p>No feedback given</p>;
+    return <p className={css.container}>No feedback given</p>;
   }
 
   return (
